@@ -21,10 +21,9 @@ import throttle from 'lodash.throttle';
 	}
 	
 	function onTextareaInput(evt) {
-	
+    formData[evt.target.name] = evt.target.value;
 	localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-	formData[evt.target.name] = evt.target.value;
-	
+		
 	}
 	
 	function populateTextarea() {
